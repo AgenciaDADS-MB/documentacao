@@ -1,8 +1,7 @@
-
 /* Estilo do corpo da página */
 body {
   font-family: Arial, sans-serif;
-  background-color: #2B2D31FF;
+  background-color: #2b2d31ff;
   margin: 0;
   padding: 0;
   display: grid;
@@ -53,20 +52,20 @@ a {
   text-decoration: underline 1px #fff;
 }
 
-d{
+d {
   color: #fff;
-  
 }
 
 a:hover {
-  color: #00C5FF;
+  color: #00c5ff;
 }
 
 a.title {
   color: #fff;
 }
-b{
-  color:#fff;
+
+b {
+  color: #fff;
   text-align: center;
 }
 
@@ -75,7 +74,7 @@ a.subtitle {
 }
 
 li {
-  color: #00C5FF;
+  color: #00c5ff;
   position: relative;
   list-style-type: circle;
 }
@@ -108,7 +107,6 @@ li:hover {
 main {
   margin-left: 200px;
   padding-left: 20px;
-
 }
 
 .pageNav {
@@ -145,13 +143,13 @@ main {
 }
 
 /* Esconde a seta padrão */
-details>summary {
+details > summary {
   list-style: none;
 }
 
 /* Adiciona uma seta personalizada */
-details>summary:before {
-  content: '▶';
+details > summary:before {
+  content: "▶";
   color: #00c5ff;
   display: inline-block;
   margin-right: 6px;
@@ -159,7 +157,7 @@ details>summary:before {
 }
 
 /* Rotaciona a seta quando o menu está aberto */
-details[open]>summary:before {
+details[open] > summary:before {
   transform: rotate(90deg);
 }
 
@@ -170,29 +168,26 @@ details[open]>summary:before {
 }
 
 .subtitle:hover {
-  color: #00C5FF;
+  color: #00c5ff;
   position: relative;
 }
 
 .title:hover {
-
-  color: #00C5FF;
+  color: #00c5ff;
   position: relative;
 }
-
 
 /* Estilo das seções */
 section {
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #2B2D31FF;
+  background-color: #2b2d31ff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 ul {
   padding-left: 20px;
 }
-
 
 .title {
   font-size: 16px;
@@ -217,10 +212,14 @@ ul {
   width: 60px;
   justify-self: end;
   justify-content: flex-end;
-  -webkit-mask: linear-gradient(#0000 calc(100vh + var(--offset)),
-      #000 calc(100vh + var(--offset) + var(--fade)));
-  mask: linear-gradient(#0000 calc(100vh + var(--offset)),
-      #000 calc(100vh + var(--offset) + var(--fade)));
+  -webkit-mask: linear-gradient(
+    #0000 calc(100vh + var(--offset)),
+    #000 calc(100vh + var(--offset) + var(--fade))
+  );
+  mask: linear-gradient(
+    #0000 calc(100vh + var(--offset)),
+    #000 calc(100vh + var(--offset) + var(--fade))
+  );
 }
 
 .container-body {
@@ -234,25 +233,28 @@ ul {
   max-width: 950px;
   width: auto;
 }
-.docone{
+
+.docone {
   padding-left: 150px;
   margin: 20px;
   max-width: 950px;
   width: auto;
 }
-.docdois{
+
+.docdois {
   padding-left: 100px;
   margin: 20px;
   max-width: 950px;
   width: auto;
 }
 
-.doctres{
+.doctres {
   padding-left: 100px;
   margin: 20px;
   max-width: 950px;
   width: auto;
 }
+
 .baixarunity {
   padding-left: 100px;
   margin: 20px;
@@ -345,7 +347,7 @@ ul {
   /* visual styling */
   width: 100%;
   aspect-ratio: 1;
-  background: #00C5FF;
+  background: #00c5ff;
   border-radius: 10px;
 }
 
