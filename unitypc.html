@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Documentação do Aplicativo Unity RA C#</title>
+    <link rel="stylesheet" href="unitypc.css" />
+</head>
+<header>
+    <h1>Documentação do Aplicativo Unity RA C#</h1>
+</header>
+
+<body>
+    <div>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html" elass="title">Voltar</a></li>
+                <li><a href="#api" class="title">Bibliotecas usadas</a></li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <section id="Antes de tudo" class="cointainertop">
+            <!-- Conteúdo da seção Introdução -->
+            <h2>Como achar o que procura na gameview</h2>
+            <p>Quando você quiser escolher uma cena para ver como estão posicinados os botões, os objetos 3d, você pode
+                abrir a hierarquia ao lado da gameview</br>
+                e selecionar com um clique do mouse e depois pode apertar a tecla F duas vezes que vc vai ser levado até
+                o que procura, no caso da tela Principal,
+                </br> você será levado ao caminhão
+                </br>
+
+                <img class="acharactros" src="acharactros.png">
+                </br>
+                O princípio do Build Settings quando passa pro celular colocando as cenas em ordem se aplicam na game
+                view
+                é preciso deixa-las em ordem ante de dar play em</br> qualquer cena, caso de play na cena "Principal", a
+                tela sempre
+                será escura, pois ele vai estar procurando uma camera AR, ou abrirá a camera do notebook ou </br>uma web
+                cam, caso a unity o reconheça
+                , ele pede um chão para o colocar o objeto para poder começar a aparecer os botões, como é no
+                celular.</br>
+                Porém existe uma forma de burlar isso, ao abrir a hierarquia assim como na imagem e achar o botão
+                nomeado "Abrir", ao torna-lo visível, a sua tela "Game", ficará</br>
+                igual a da imagem, porém quando você aproximar a sua viewpoert do caminhão, ele funcionará tudo de forma
+                perfeita, as trocas de cores, cotas, abrir porta, bascular. </br>
+                Só não irá andar pois ele precisa estar no chão para se movimentar, então ele só girará as rodas neste
+                modo.
+                </br></br></br>
+                <img class="inicioprincipal" src="iniciprincipal.png">
+                </br></br></br>
+            <h2> Detalhe Importante</h2>
+            <p>Todas as alterações feitas enquanto está no modo de jogo o "Play", ao sair deste modo elas são todas
+                desfeitas automaticamente, remover partes 3d </br>
+                remover código, apagar botões, ao sair do "Play", tudo isso é desfeito por exemplo</p>
+            </br></br></br>
+
+            <section id="api">
+                <!-- Conteúdo da seção Bibliotecas externas usadas -->
+                <h3>Bibliotecas usadas</h3>
+                <p>
+                <ul>
+                    <li><a
+                            href="https://docs.unity3d.com/Packages/com.unity.xr.core-utils@2.0/manual/xr-origin.html#:~:text=The%20XR%20Origin%20represents%20the,Offset%20Object%2C%20and%20a%20Camera.">XROrigin</a>
+                    </li>
+                    <li><a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@5.1/manual/index.html">AR
+                            Foundation</a></li>
+                    <li><a
+                            href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.0/manual/plane-manager.html">AR
+                            Plane Manager</a></li>
+                    <li><a
+                            href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.2/manual/anchor-manager.html#:~:text=The%20anchor%20manager%20is%20a,the%20anchor%20throughout%20its%20lifetime.">AR
+                            Anchor Manager</a></li>
+                    <li><a
+                            href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.0/manual/raycast-manager.html">AR
+                            Raycast Manager</a></li>
+                    <li><a
+                            href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@2.2/api/UnityEngine.XR.ARFoundation.ARInputManager.html">AR
+                            Input Manager</a></li>
+                    <li><a
+                            href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.0/api/UnityEngine.XR.ARFoundation.ARCameraManager.html">AR
+                            Camera Manager</a></li>
+                    <li><a
+                            href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@1.0-preview.8/api/UnityEngine.XR.ARFoundation.ARSessionOrigin.html">AR
+                            Session Oriin</a></li>
+                    </p>
+            </section>
+
+    </main>
+    <div class="container-top">
+        <a href="#" class="top"></a>
+
+    </div>
+    <footer>
+        <d>&copy; Agência DADS de Publicidade</d>
+    </footer>
+</body>
+
+</html>
