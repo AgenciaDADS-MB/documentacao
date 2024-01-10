@@ -1,175 +1,231 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <title>Documentação do Aplicativo Unity RA C#</title>
+    <link rel="stylesheet" href="unitystyle.css" />
+  </head>
+  <header>
+    <h1>Documentação do Aplicativo Unity RA C#</h1>
+  </header>
 
-<head>
-  <title>Documentação do Aplicativo Unity RA C#</title>
-  <link rel="stylesheet" href="unitystyle.css" />
-</head>
-<header>
-  <h1>Documentação do Aplicativo Unity RA C#</h1>
-</header>
-
-<body>
-  <div>
-    <div class="navbar">
-      <ul>
-        <li><a href="index.html" elass="title">Voltar</a></li>
-        <li><a href="#api" class="title">Bibliotecas usadas</a></li>
-      </ul>
-    </div>
-  </div>
-
-
-  <main>
-    <section id="Antes de tudo" class="cointainertop">
-      <!-- Conteúdo da seção Introdução -->
-      <h2>Antes de Tudo</h2>
-      <p>Antes de tudo, gostaria de indicar que é altamente indicado o app ser testado suas funcionalidades dentro do
-        celular primeiro, para isso irei auxiliar você!</br>
-        Primeiro vou lhe ajudar um passo a passo de como baixar a Unity e pegar o projeto exportado e passar para o
-        celular!
-        </br>
-        Primeiro você precisa baixar o Unity no site deles e clicar onde está na imagem. <a
-          href="https://unity.com/pt/download"> Clique aqui!</a>
-        </br>
-        </br>
-        NOTA:É um projeto feito em Windows, ele só funcionará no momento em Android!
-        <img class="baixarunity" src="baixarunity.png">
-        </br>
-        Ao Terminar o Download, caso você ja tenha um visual studio ou o visual studio code, não será necessário
-        instalar, faça a ativação das chaves e abra o Unity Hub
-        </br></br></br>
-        <img class="imagemhub" src="hub.jpg">
-        </br></br></br>
-        Ao abrir o Unity Hub clique em New Project certifique-se de que irá usar a versão 2022.3.7f1, e baixar os
-        seguintes requisitos
-        para funcionar no android.
-        </br></br></br>
-
-        <img class="docone" src="documentacao1.png">
-        </br></br></br>
-
-        </br></br></br>
-
-        <img class="docdois" src="documentacao2.png">
-        </br></br></br>
-        Após selecionar todos os requisitos, clique em continue e aguarde a instalação.
-        </br></br></br>
-
-        <img class="doctres" src="documentacao3.png">
-        </br></br></br>
-        Clique em criar um New Project novamente, selecione o template AR, e clique em Create Project
-        </br></br></br>
-
-        <img class="imagemcp" src="criarprojeto.png">
-        </br></br></br>
-        Quando abrir, clique no espaço vazio debaixo com o botão direito do mouse e clique em Import Package e Custom
-        Package
-        </br></br></br>
-        <img class="imagemexport" src="exportar.png">
-        </br></br></br>
-        Selecione o projeto exportado e clique nele, após alguns segundos ele irá pedir o que deve ser exportado, se
-        tudo estiver selecionado, clique em Import
-        </br></br></br>
-
-        <img class="imagemconfirma" src="confirmar_export.png">
-        </br></br></br>
-        Na cena "Principal", se você reparar o caminhão estará rosa, pois está faltando um plugin a ser adicionado para
-        ativar algumas texturas específicas
-        </br></br></br>
-
-        <img class="imagemcr" src="Caminhao_rosa.png">
-        </br></br></br>
-        Para adicionar este plugin, você precisa clicar em Window e Package Manager
-        </br></br></br>
-
-        <img class="imagemis" src="instalar_Shader.png">
-        </br></br></br>
-        Quando o Package Manager abrir, certifique-se do Packages estar selecionado o Unity Registry, e na lupa procure
-        por Shader Graph, e instale-a
-        </br></br></br>
-        <img class="imagemsg" src="shadergraph.png">
-        </br></br></br>
-        Agora você precisa trocar a forma de passar o build para celular, aperte "CTRL + SHIFT + B", e ele irá abrir a
-        tela abaixo, você precisa clicar no símbolo do Android</br>
-        selecionar o Development Build e depois em "Switch Plataform"
-        </br></br></br>
-        <img class="imagemsa" src="switchandroid.png">
-        </br></br></br>
-        Após isso, olhe para o lado direito da tela e clique no Project Settings, Player e desmarque as opções
-        "Portrait" e "Portrait Upside Down"
-        </br></br></br>
-
-        <img class="imagempt" src="Portrait.png">
-        </br></br></br>
-        As cenas principais que são usadas se chamam, "Vídeo", "Login", "MenuTruck", "Loading", "Principal" e
-        "Dentrocarro"
-        você pode encontra-las na pasta Scenes,</br> para coloca-las no celular é só clicar nelas e arrastar para dentro
-        o Build Settings, na ordem, pois esta é a ordem do projeto
-        </br></br></br>
-
-      <h2>ATENÇÃO, não esqueça de ativar o modo desenvolvedor do seu celular!</h2>
-      <p>Você precisa ativar o modo desenvolvedor <a
-          href="https://canaltech.com.br/android/como-ativar-modo-desenvolvedor-android/"> Veja mais aqui</a> e também a
-        depuração via USB <a href="https://tecnoblog.net/responde/depuracao-usb-como-ativar-ou-desativar-no-android/">
-          Veja mais aqui!.</a></p>
-      </br></br></br>
-      <h2>Após isso, continue normalmente</h2>
-      </br></br></br>
-      <p>Conecte o celular via cabo USB no computador, em "Run Device" ele deve aparecer o modelho do seu aparelho, caso
-        não apareça você precisa clicar em "Refresh"
-        </br> Ao aparecer selecione o modelo e cliquei embaixo em "Build and Run" e só aguardar a instalação, ao
-        terminar ele vai abrir automaticamente no celular.
-      </p>
-      <img class="imagemb" src="Build.png">
-      </br></br></br>
-      <p>Caso queira acessar os Scripts, estão todos comentados de forma para fácil entendimento, para encontra-los é só
-        procurar por Scripts como mostra na imagem, clicando duas vezes ele irá abrir </br>
-        por padrão no visual studio, os fora das pastas são os principais e os que mais estão em uso, sinta-se livre
-        para explorar o projeto
-        </br></br></br>
-
-        <img class="script" src="scripts.png">
-      </br>
-Qualquer duvida não hesite <em></em> entrar em contato pelo meu e-mail: jpcavalcavalchikar@hotmail.com
-      </p>
-
-      <section id="api">
-        <!-- Conteúdo da seção Bibliotecas externas usadas -->
-        <h3>Bibliotecas usadas</h3>
-        <p>
+  <body>
+    <div>
+      <div class="navbar">
         <ul>
-          <li><a
-              href="https://docs.unity3d.com/Packages/com.unity.xr.core-utils@2.0/manual/xr-origin.html#:~:text=The%20XR%20Origin%20represents%20the,Offset%20Object%2C%20and%20a%20Camera.">XROrigin</a>
-          </li>
-          <li><a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@5.1/manual/index.html">AR
-              Foundation</a></li>
-          <li><a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.0/manual/plane-manager.html">AR
-              Plane Manager</a></li>
-          <li><a
-              href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.2/manual/anchor-manager.html#:~:text=The%20anchor%20manager%20is%20a,the%20anchor%20throughout%20its%20lifetime.">AR
-              Anchor Manager</a></li>
-          <li><a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.0/manual/raycast-manager.html">AR
-              Raycast Manager</a></li>
-          <li><a
-              href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@2.2/api/UnityEngine.XR.ARFoundation.ARInputManager.html">AR
-              Input Manager</a></li>
-          <li><a
-              href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.0/api/UnityEngine.XR.ARFoundation.ARCameraManager.html">AR
-              Camera Manager</a></li>
-          <li><a
-              href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@1.0-preview.8/api/UnityEngine.XR.ARFoundation.ARSessionOrigin.html">AR
-              Session Oriin</a></li>
-          </p>
+          <li><a href="index.html" elass="title">Voltar</a></li>
+          <li><a href="#api" class="title">Bibliotecas usadas</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <main>
+      <section id="Antes de tudo" class="cointainertop">
+        <!-- Conteúdo da seção Introdução -->
+        <h2>Antes de Tudo</h2>
+        <p>
+          Antes de tudo, gostaria de indicar que é altamente indicado o app ser
+          testado suas funcionalidades dentro do celular primeiro, para isso
+          irei auxiliar você!<br />
+          Primeiro vou lhe ajudar um passo a passo de como baixar a Unity e
+          pegar o projeto exportado e passar para o celular!
+          <br />
+          Primeiro você precisa baixar o Unity no site deles e clicar onde está
+          na imagem. <a href="https://unity.com/pt/download"> Clique aqui!</a>
+          <br />
+          <br />
+          NOTA:É um projeto feito em Windows, ele só funcionará no momento em
+          Android!
+          <img class="baixarunity" src="baixarunity.png" />
+          <br />
+          Ao Terminar o Download, caso você ja tenha um visual studio ou o
+          visual studio code, não será necessário instalar, faça a ativação das
+          chaves e abra o Unity Hub
+          <br /><br /><br />
+          <img class="imagemhub" src="hub.jpg" />
+          <br /><br /><br />
+          Ao abrir o Unity Hub clique em New Project certifique-se de que irá
+          usar a versão 2022.3.7f1, e baixar os seguintes requisitos para
+          funcionar no android.
+          <br /><br /><br />
+
+          <img class="docone" src="documentacao1.png" />
+          <br /><br /><br />
+
+          <br /><br /><br />
+
+          <img class="docdois" src="documentacao2.png" />
+          <br /><br /><br />
+          Após selecionar todos os requisitos, clique em continue e aguarde a
+          instalação.
+          <br /><br /><br />
+
+          <img class="doctres" src="documentacao3.png" />
+          <br /><br /><br />
+          Clique em criar um New Project novamente, selecione o template AR, e
+          clique em Create Project
+          <br /><br /><br />
+
+          <img class="imagemcp" src="criarprojeto.png" />
+          <br /><br /><br />
+          Quando abrir, clique no espaço vazio debaixo com o botão direito do
+          mouse e clique em Import Package e Custom Package
+          <br /><br /><br />
+          <img class="imagemexport" src="exportar.png" />
+          <br /><br /><br />
+          Selecione o projeto exportado e clique nele, após alguns segundos ele
+          irá pedir o que deve ser exportado, se tudo estiver selecionado,
+          clique em Import
+          <br /><br /><br />
+
+          <img class="imagemconfirma" src="confirmar_export.png" />
+          <br /><br /><br />
+          Na cena "Principal", se você reparar o caminhão estará rosa, pois está
+          faltando um plugin a ser adicionado para ativar algumas texturas
+          específicas
+          <br /><br /><br />
+
+          <img class="imagemcr" src="Caminhao_rosa.png" />
+          <br /><br /><br />
+          Para adicionar este plugin, você precisa clicar em Window e Package
+          Manager
+          <br /><br /><br />
+
+          <img class="imagemis" src="instalar_Shader.png" />
+          <br /><br /><br />
+          Quando o Package Manager abrir, certifique-se do Packages estar
+          selecionado o Unity Registry, e na lupa procure por Shader Graph, e
+          instale-a
+          <br /><br /><br />
+          <img class="imagemsg" src="shadergraph.png" />
+          <br /><br /><br />
+          Agora você precisa trocar a forma de passar o build para celular,
+          aperte "CTRL + SHIFT + B", e ele irá abrir a tela abaixo, você precisa
+          clicar no símbolo do Android<br />
+          selecionar o Development Build e depois em "Switch Plataform"
+          <br /><br /><br />
+          <img class="imagemsa" src="switchandroid.png" />
+          <br /><br /><br />
+          Após isso, olhe para o lado direito da tela e clique no Project
+          Settings, Player e desmarque as opções "Portrait" e "Portrait Upside
+          Down"
+          <br /><br /><br />
+
+          <img class="imagempt" src="Portrait.png" />
+          <br /><br /><br />
+          As cenas principais que são usadas se chamam, "Vídeo", "Login",
+          "MenuTruck", "Loading", "Principal" e "Dentrocarro" você pode
+          encontra-las na pasta Scenes,<br />
+          para coloca-las no celular é só clicar nelas e arrastar para dentro o
+          Build Settings, na ordem, pois esta é a ordem do projeto
+          <br /><br /><br />
+        </p>
+
+        <h2>
+          ATENÇÃO, não esqueça de ativar o modo desenvolvedor do seu celular!
+        </h2>
+        <p>
+          Você precisa ativar o modo desenvolvedor
+          <a
+            href="https://canaltech.com.br/android/como-ativar-modo-desenvolvedor-android/"
+          >
+            Veja mais aqui</a
+          >
+          e também a depuração via USB
+          <a
+            href="https://tecnoblog.net/responde/depuracao-usb-como-ativar-ou-desativar-no-android/"
+          >
+            Veja mais aqui!.</a
+          >
+        </p>
+        <br /><br /><br />
+        <h2>Após isso, continue normalmente</h2>
+        <br /><br /><br />
+        <p>
+          Conecte o celular via cabo USB no computador, em "Run Device" ele deve
+          aparecer o modelho do seu aparelho, caso não apareça você precisa
+          clicar em "Refresh" <br />
+          Ao aparecer selecione o modelo e cliquei embaixo em "Build and Run" e
+          só aguardar a instalação, ao terminar ele vai abrir automaticamente no
+          celular.
+        </p>
+        <img class="imagemb" src="Build.png" />
+        <br /><br /><br />
+        <p>
+          Caso queira acessar os Scripts, estão todos comentados de forma para
+          fácil entendimento, para encontra-los é só procurar por Scripts como
+          mostra na imagem, clicando duas vezes ele irá abrir <br />
+          por padrão no visual studio, os fora das pastas são os principais e os
+          que mais estão em uso, sinta-se livre para explorar o projeto
+          <br /><br /><br />
+
+          <img class="script" src="scripts.png" />
+          <br />
+          Qualquer duvida não hesite <em></em> entrar em contato pelo meu
+          e-mail: jpcavalcavalchikar@hotmail.com
+        </p>
+
+        <section id="api">
+          <!-- Conteúdo da seção Bibliotecas externas usadas -->
+          <h3>Bibliotecas usadas</h3>
+          <p></p>
+          <ul>
+            <li>
+              <a
+                href="https://docs.unity3d.com/Packages/com.unity.xr.core-utils@2.0/manual/xr-origin.html#:~:text=The%20XR%20Origin%20represents%20the,Offset%20Object%2C%20and%20a%20Camera."
+                >XROrigin
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@5.1/manual/index.html"
+                >AR Foundation
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.0/manual/plane-manager.html"
+                >AR Plane Manager
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.2/manual/anchor-manager.html#:~:text=The%20anchor%20manager%20is%20a,the%20anchor%20throughout%20its%20lifetime."
+                >AR Anchor Manager
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.0/manual/raycast-manager.html"
+                >AR Raycast Manager
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@2.2/api/UnityEngine.XR.ARFoundation.ARInputManager.html"
+                >AR Input Manager
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.0/api/UnityEngine.XR.ARFoundation.ARCameraManager.html"
+                >AR Camera Manager
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@1.0-preview.8/api/UnityEngine.XR.ARFoundation.ARSessionOrigin.html"
+                >AR Session Oriin
+              </a>
+            </li>
+          </ul>
+        </section>
       </section>
-
-  </main>
-  <div class="container-top">
-    <a href="#" class="top"></a>
-
-  </div>
-  <footer>
-    <d>&copy; Agência DADS de Publicidade</d>
-  </footer>
-</body>
-
+    </main>
+    <div class="container-top">
+      <a href="#" class="top"></a>
+    </div>
+    <footer>
+      <d>&copy; Agência DADS de Publicidade</d>
+    </footer>
+  </body>
 </html>
