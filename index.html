@@ -4,336 +4,287 @@
   <title>Documentação do Aplicativo Unity RA C#</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+<header>
+  <h1>Documentação do Aplicativo Unity RA C#</h1>
+</header>
 
 <body>
+
   <div>
     <div class="navbar">
-      
       <ul>
         <li><a href="#introducao" class="title">Introdução</a></li>
-        <li><a href="#unity" class="title">Unity</a></li>
-        <li><a href="#cenas" class="title">Cenas</a></li>
-        <ul>
-        <li><a href="#video" class="title">Vídeo</a></li>
-        <li><a href="#login" class="title">Login</a></li>
-        <li><a href="#menutruck" class="title">Menu Truck</a></li>
-        <li><a href="#telaprincipal" class="title">Tela Principal</a></li>
-        <li><a href="#botaodrive" class="title">Botão Drive</a></li>
-        <li><a href="#botaoscale" class="title">Botão Scale</a></li>
-        <li><a href="#botaohome" class="title">Botão Home</a></li>
-        <li><a href="#funcoesmenu" class="title">Funções do Menu</a></li>
-        <ul>
-         
-          <li><a href="#cores" class="subtitle">Cores </a></li>
-          <li><a href="#implemento" class="subtitle">Implemento</a></li>
-          <li><a href="#cabines" class="subtitle">Cabines</a></li>
-          <li><a href="#argumentos" class="subtitle">Argumentos</a></li>
-          <li><a href="#acoes" class="subtitle">Ações</a></li>
-          <li><a href="#fichatecnica" class="subtitle">Ficha Técnica</a></li>
-          <li><a href="#cotass" class="subtitle">Cotas</a></li>
-        </ul>
-        <li><a href="#dentrocarro" class="title">Dentro Carro</a></li>
-
-        </li>
-        
+        <li><a href="unity.html" class="title">UnityEngine</a></li>
+        <details class="menucenas">
+          <summary>Cenas</summary>
+          <ul>
+            <li><a href="#video" class="title">Vídeo</a></li>
+            <li><a href="#login" class="title">Login</a></li>
+            <li><a href="#menutruck" class="title">Menu Truck</a></li>
+            <li><a href="#telaprincipal" class="title">Tela Principal</a></li>
+            <li><a href="#botaodrive" class="title">Botão Drive</a></li>
+            <li><a href="#botaoscale" class="title">Botão Scale</a></li>
+            <li><a href="#botaohome" class="title">Botão Home</a></li>
+            <details class="menufuncao">
+              <summary>Funções do Menu</summary>
+              <ul>
+                <li><a href="#cores" class="subtitle">Cores </a></li>
+                <li><a href="#implemento" class="subtitle">Implemento</a></li>
+                <li><a href="#cabines" class="subtitle">Cabines</a></li>
+                <li><a href="#argumentos" class="subtitle">Argumentos</a></li>
+                <li><a href="#acoes" class="subtitle">Ações</a></li>
+                <li><a href="#fichatecnica" class="subtitle">Ficha Técnica</a></li>
+                <li><a href="#cotass" class="subtitle">Cotas</a></li>
+              </ul>
+            </details>
+            <li><a href="#dentrocarro" class="title">Dentro Carro</a></li>
+          </ul>
+        </details>
       </ul>
-      <li><a href="#api" class="title">Bibliotecas usadas</a></li>
-      </ul>
-      
     </div>
+  </div>
 
-    <header>
-      <h1>Documentação do Aplicativo Unity RA C#</h1>
-    </header>
-    
-    <main>
-      <section id="Antes de tudo" class="cointainertop">
-        <!-- Conteúdo da seção Introdução -->
-        <h2>Antes de Tudo</h2>
-        <p>Antes de tudo, gostaria de indicar que é altamente indicado o app ser testado suas funcionalidades dentro do
-          celular primeiro, para isso irei auxiliar você!</br>
-          Antes de tudo caso seja um objeto exportado, precisa em UnityHub e criar um novo projeto de "AR", logo após
-          dentro da área "Project" no canto inferior é só clicar em um espaço vazio
-          com o botão direito do mouse e selecionar a função "Import Package" e depos "Import Custom Package", ele irá
-          pedir para confirmar pois a tela principal tem o nome de "SampleScene", é só confirmar no "Sim", que ele faz a
-          subtituição.
+
+  <main>
+    <section id="introducao" class="introducao">
+      <!-- Conteúdo da seção Introdução -->
+      <h2>Introdução</h2>
+      <p>Leia o tutorial na aba "UnityEngine" onde tem um passo a passo de como passar pro celular e testar da melhor forma o projeto
+      </br>
+
+      </br>
+        O aplicativo é usado como uma forma de auxiliar o vendedor na hora de mostrar o caminhão de forma prática e
+        rápiada para o cliente, feito através do Software Unity versão 2022.3.7.f1 na linguagem C#. Dentro do
+        aplicativo tanto o vendedor quanto cliente tem a possibilidade de explorar todas as possibilidades que a
+        Mercedes-Benz disponibiliza, trocar cores, cabines, ver sua ficha tecnica, sua cota, andar com o caminhão, ter
+        uma visão interna e entre outros</p>
+    </section>
+    <section id="cena">
+      <!-- Conteúdo da seção Telas -->
+      <section id="video">
+        <!-- Conteúdo da subseção Login -->
+        <h2>Vídeo</h2>
+        <p>
+          Esta tela é a primeira a ser exibida ao usuário.
           </br>
-          Você pode notar que algumas texturas estão rosas mas para arrumar isso é simples, so seguir o caminho
-          "Window", "Package Manager", quando abrir uma aba confirme se o "Package", está em "Unity Registry" e só
-          digitar na lupa "Shader Graph" e instalar que ele irá arrumar tudo,
-          para passar para o celular é bem simples, primeiro vc pressiona "CTRL + SHIFT + B", irá parecer uma aba
-          chamada "Build Settings", nela você deverá adicionar as cenas na seguinte ordem "Vídeo",
-          "Login","MenuTruck","SampleScene" e "dentrocarro" eles devem estar nessa ordem 0 até 4.
-          na aba "Plataform" vc deve clicar no símbolo "Android" e logo após em "Switch Platform", quando finalizar só
-          ir em "run device" clicar nele escolher seu aparelho e apertar em "build and run"
+          Nesta tela aparece um vídeo de
+          2.8 segundos com o vídeo de abertura da Mercedes-Benz e logo após é redireciado para a tela de Login e
+          Senha.
         </p>
       </section>
-      <section id="introducao" class="introducao">
-        <!-- Conteúdo da seção Introdução -->
-        <h2>Introdução</h2>
-        <p>O aplicativo é usado como uma forma de auxiliar o vendedor na hora de mostrar o caminhão de forma prática e
-          rápiada para o cliente, feito através do Software Unity versão 2022.3.7.f1 na linguagem C#. Dentro do
-          aplicativo tanto o vendedor quanto cliente tem a possibilidade de explorar todas as possibilidades que a
-          Mercedes-Benz disponibiliza, trocar cores, cabines, ver sua ficha tecnica, sua cota, andar com o caminhão, ter
-          uma visão interna e entre outros</p>
+      <section id="login">
+        <!-- Conteúdo da subseção Perfil -->
+        <h2>Tela Login</h2>
+        <p>
+          Cena após o vídeo acabar e trocar de cena.
+          </br>
+          Nessa tela é possível visualizar o sistema de login e senha, porém pode se continuar se clicando somente no
+          "OK".
+        </p>
       </section>
-      <section id="cena">
-        <!-- Conteúdo da seção Telas -->
-        <section id="video">
-          <!-- Conteúdo da subseção Login -->
-          <h2>Vídeo</h2>
-          <p>
-            Esta tela é a primeira a ser exibida ao usuário.
-            </br>
-            Nesta tela aparece um vídeo de
-            2.8 segundos com o vídeo de abertura da Mercedes-Benz e logo após é redireciado para a tela de Login e
-            Senha.
-          </p>
-        </section>
-        <section id="login">
-          <!-- Conteúdo da subseção Perfil -->
-          <h2>Tela Login</h2>
-          <p>
-            Cena após o vídeo acabar e trocar de cena.
-            </br>
-            Nessa tela é possível visualizar o sistema de login e senha, porém pode se continuar se clicando somente no
-            "OK".
-          </p>
-        </section>
-        <section id="menutruck">
-          <!-- Conteúdo da subseção Seleção de família -->
-          <h2>Menu Truck</h2>
-          <p>
-            Acessível após o login.
-            </br>
-            Aqui o usuário pode ver todas as categorias de caminhões Mercedes-Benz.
-            Ele deve clicar no Actros que é o segundo caminhão da esquerda para direita, nisto irá aparecer um pop-up
-            com todos os modelos, e ao clicar neles irá aparecer uma imagem
-            referente e um botão de "OK" do lado esquerdo.
-            </br>
-            Ao clicar em um modelo, o usuário é redirecionado para a tela principal do aplicativo.
-          </p>
-        </section>
-        <section id="telaprincipal">
-          <!-- Conteúdo da subseção Seleção de modelo -->
-          <h2>Tela Principal</h2>
-          <p>
-            Acessível após selecionar a família e modelo na tela anterior.
-            </br>
-            Começara com a camera do celular procurando primeiro um plano para ser posicionado o celular, ao reconhecer
-            o plano irá aparecer uma imagem escrita "Clique Aqui".
-            </br>
-            Ao colocar o caminhão o usuário irá se deparar com o menu que irá aparecer em sua tela de forma responsiva,
-            um botão com o menu de ações.
-            </br>
-            Um botão para voltar a cena de MenuTruck caso ele queira trocar o caminhão <del> quando houver outros</del>.
-            </br>
-            Um botão para aumentar a sua escala para o tamanho mais próximo da realidade de acordo com a perspectiva que
-            está posicionado do chão.
-            </br>
-            Um botão engrenagem que aina não está em uso, servirá para guardar as informações do usuários para ele poder
-            checar sempre que quiser.
-          </p>
-        </section>
-        <section id="botaodrive">
-          <!-- Conteúdo da subseção Seleção de modelo -->
-          <h2>Botão Drive</h2>
-          <p>
-            Este botão carrega uma das funções mais importantes do aplicativo, que seria a sua jogabilidade
-            </br>
-            Ao ser tocado este botão irá sumir todos os botões de menu iniciais e colocará 2 novos botões para controlar
-            o caminhão, o botão da direita é um deslizante vertical que vai para cima e para baixo, ele movimenta o
-            caminhão como se estivesse acelerando ou dando ré, a ideia é quando for feita a troca de direção rapidamente
-            ela ser feita de forma sútil dentro do aplicativo,
-            e quanto mais perto dos extremos ele deve ir mais rápido e caso contrário mais devagar, o botão lateral é um
-            botão horizontal que controla a direção do caminhão está indo simulando a um volante,
-            a princípio ele deve mover o caminhão de acordo com a sua velocida de movimentação, quanto mais rápido ele
-            está, mais rápido sua rotação e o contrário deve ser mais lento.
-            </br>
-          </p>
-        </section>
-        <section id="botaoscale">
-          <!-- Conteúdo da subseção Seleção de modelo -->
-          <h2>Botão Scale</h2>
-          <p>
-            Este botão carrega a função de controlar a escala do ca
-            </br>
-            Ao ser tocado este botão irá sumir todos os botões de menu iniciais e colocará 2 novos botões para controlar
-            o caminhão, o botão da direita é um deslizante vertical que vai para cima e para baixo, ele movimenta o
-            caminhão como se estivesse acelerando ou dando ré, a ideia é quando for feita a troca de direção rapidamente
-            ela ser feita de forma sútil dentro do aplicativo,
-            e quanto mais perto dos extremos ele deve ir mais rápido e caso contrário mais devagar, o botão lateral é um
-            botão horizontal que controla a direção do caminhão está indo simulando a um volante,
-            a princípio ele deve mover o caminhão de acordo com a sua velocida de movimentação, quanto mais rápido ele
-            está, mais rápido sua rotação e o contrário deve ser mais lento.
-            </br>
-          </p>
-        </section>
-        <section id="botaohome">
-          <!-- Conteúdo da subseção Seleção de modelo -->
-          <h2>Botão Home</h2>
-          <p>
-            Este está ao lado esquerdo superior da tela
-            </br>
-            Ao ser tocado este botão irá fazer com que o usuário final volte para para a tela de Menu Truck caso ele
-            decida ver outras opções de modelos de caminhões.
-            </br>
-          </p>
-        </section>
-        <section id="funcoesmenu">
-          <!-- Conteúdo da subseção Ações -->
-          <h2>Funções do menu</h2>
-        
-          </i>
-          <section id="cores">
-            <!-- Conteúdo da subseção Interno -->
-            <h3>Cores</h3>
-            <p>
-              Ao Clicar na opção "cores" no menu, irá abrir um submenu com rolamento das 23 opções de cores e suas
-              descrições que ao tocar nelas o usuário irá reparar que trocou toda a cor
-              da cabine do caminhão.
-              </br>
-              Ao Apertar no botão "X" que está no local de onde estava o botão para abrir o menu, ele irá fechar o
-              submenu de cores e voltará ao menu de funções porém o caminhão irá manter a última cor colocada.
-            </p>
-          </section>
-          <section id="implemento">
-            <!-- Conteúdo da subseção Externo -->
-            <h3>Implemento</h3>
-            <p>
-              Ao clicar na opção "Implementos", do menu de funções irá abrir um submenu com 17 opções de Implementos e
-              ao clicar neles irá abrir um submenu com sua descrição, por exemplo "3 Eixos","3 Eixos Espaçado","Bitrem 7
-              Eixos","3 + 1 Eixos".
-              </br>
-              Todas essas opções deverão mostrar os implementos de acordo <del> quando houver os modelos prontos pro
-                aplicativo</del>, para poder ver de forma mais imersiva e até tirar duvidas sobre qual é o melhor para o
-              modelo e a finalidade do caminhão
-              No momento, as opções são apenas visuais, ao clicar em qualquer botão ele irá aparecer porém ao apertar o
-              drive ele irá sumir e não ocorrerá nenhuma ação.
-              </br>
-            </p>
-          </section>
-          <section id="cabines">
-            <!-- Conteúdo da subseção Estúdio -->
-            <h3>Cabine</h3>
-            <p>
-              Acessível ao clicar na opção "Cabine", do menu funções irá abrir um submenu com 2 opções de cabines
-              disponíveis para o modelo
-              </br>
-              No momento,só tem a opção "Top Space" com funcionalidade, ela deve abrir um submenu com 3 opções de
-              Defletores, Defletor alto, defeltor baixo e sem defletor.
-            </p>
-          </section>
-          <section id="argumentos">
-            <!-- Conteúdo da subseção Estúdio -->
-            <h3>Argumentos</h3>
-            <p>
-              Acessível ao clicar na opção "Argumentos", do menu funções, ele irá recolher o botão "Drive" e colocar 2
-              botões azuis no caminhão onde deverá mostrar e explicar partes específicas do caminhão.
-              </br>
-              No momento, as opções ainda não estão colocadas então só está visualmente um escopo.
-            </p>
-          </section>
-          <section id="acoes">
-            <!-- Conteúdo da subseção Estúdio -->
-            <h3>Ações</h3>
-            <p>
-              Acessível ao clicar na opção "Ações", ele irá abrir um submenu com 3 opções .
-              Ao entrar nesse submenu o usuário irá ver as opções "Mirror Cam", "Bascular" e "Abrir Porta".
-              </br>
-              A opção "Mirror Cam" irá substituir o retrovisor convencional para o Mirror Cam que é uma versão mais
-              "luxuosa", o "abrir porta" só ira funcionar quando o caminhão não estiver com a animção "bascular"
-              funcionando, caso a porta esteja aberta e apertar em bascular, ela deve fechar para bascular.
-              </br>
-              O caminhão deverá andar enquanto estiver de porta aberta e/ou basculado, por isso o botão Drive irá sumir,
-              caso você volte no menu até o inicial e o "Drive" voltar a aparecer, ao clicar nele, ele irá
-              automaticamente fechar a porta ou fechar a bascula
+      <section id="menutruck">
+        <!-- Conteúdo da subseção Seleção de família -->
+        <h2>Menu Truck</h2>
+        <p>
+          Acessível após o login.
+          </br>
+          Aqui o usuário pode ver todas as categorias de caminhões Mercedes-Benz.
+          Ele deve clicar no Actros que é o segundo caminhão da esquerda para direita, nisto irá aparecer um pop-up
+          com todos os modelos, e ao clicar neles irá aparecer uma imagem
+          referente e um botão de "OK" do lado esquerdo.
+          </br>
+          Ao clicar em um modelo, o usuário é redirecionado para a tela principal do aplicativo.
+        </p>
+      </section>
+      <section id="telaprincipal">
+        <!-- Conteúdo da subseção Seleção de modelo -->
+        <h2>Tela Principal</h2>
+        <p>
+          Acessível após selecionar a família e modelo na tela anterior.
+          </br>
+          Começara com a camera do celular procurando primeiro um plano para ser posicionado o celular, ao reconhecer
+          o plano irá aparecer uma imagem escrita "Clique Aqui".
+          </br>
+          Ao colocar o caminhão o usuário irá se deparar com o menu que irá aparecer em sua tela de forma responsiva,
+          um botão com o menu de ações.
+          </br>
+          Um botão para voltar a cena de MenuTruck caso ele queira trocar o caminhão <del> quando houver outros</del>.
+          </br>
+          Um botão para aumentar a sua escala para o tamanho mais próximo da realidade de acordo com a perspectiva que
+          está posicionado do chão.
+          </br>
+          Um botão engrenagem que aina não está em uso, servirá para guardar as informações do usuários para ele poder
+          checar sempre que quiser.
+        </p>
+      </section>
+      <section id="botaodrive">
+        <!-- Conteúdo da subseção Seleção de modelo -->
+        <h2>Botão Drive</h2>
+        <p>
+          Este botão carrega uma das funções mais importantes do aplicativo, que seria a sua jogabilidade
+          </br>
+          Ao ser tocado este botão irá sumir todos os botões de menu iniciais e colocará 2 novos botões para controlar
+          o caminhão, o botão da direita é um deslizante vertical que vai para cima e para baixo, ele movimenta o
+          caminhão como se estivesse acelerando ou dando ré, a ideia é quando for feita a troca de direção rapidamente
+          ela ser feita de forma sútil dentro do aplicativo,
+          e quanto mais perto dos extremos ele deve ir mais rápido e caso contrário mais devagar, o botão lateral é um
+          botão horizontal que controla a direção do caminhão está indo simulando a um volante,
+          a princípio ele deve mover o caminhão de acordo com a sua velocida de movimentação, quanto mais rápido ele
+          está, mais rápido sua rotação e o contrário deve ser mais lento.
+          </br>
+        </p>
+      </section>
+      <section id="botaoscale">
+        <!-- Conteúdo da subseção Seleção de modelo -->
+        <h2>Botão Scale</h2>
+        <p>
+          Este botão carrega a função de controlar a escala do ca
+          </br>
+          Ao ser tocado este botão irá sumir todos os botões de menu iniciais e colocará 2 novos botões para controlar
+          o caminhão, o botão da direita é um deslizante vertical que vai para cima e para baixo, ele movimenta o
+          caminhão como se estivesse acelerando ou dando ré, a ideia é quando for feita a troca de direção rapidamente
+          ela ser feita de forma sútil dentro do aplicativo,
+          e quanto mais perto dos extremos ele deve ir mais rápido e caso contrário mais devagar, o botão lateral é um
+          botão horizontal que controla a direção do caminhão está indo simulando a um volante,
+          a princípio ele deve mover o caminhão de acordo com a sua velocida de movimentação, quanto mais rápido ele
+          está, mais rápido sua rotação e o contrário deve ser mais lento.
+          </br>
+        </p>
+      </section>
+      <section id="botaohome">
+        <!-- Conteúdo da subseção Seleção de modelo -->
+        <h2>Botão Home</h2>
+        <p>
+          Este está ao lado esquerdo superior da tela
+          </br>
+          Ao ser tocado este botão irá fazer com que o usuário final volte para para a tela de Menu Truck caso ele
+          decida ver outras opções de modelos de caminhões.
+          </br>
+        </p>
+      </section>
+      <section id="funcoesmenu">
+        <!-- Conteúdo da subseção Ações -->
+        <h2>Funções do menu</h2>
 
-            </p>
-          </section>
-          <section id="fichatecnica">
-            <!-- Conteúdo da subseção Estúdio -->
-            <h3>Ficha Técnica</h3>
-            <p>
-              Acessível ao clicar na opção "Ficha Técnica", ele irá abrir uma tela cheia da ficha técnica do caminhão
-              onde o usuário pode ver detalhadamente .
-              </br>
-              Ele poderá fazer tanto com um leve toque para cima e soltar e ele irá fazer o rolamento da tela de acordo
-              ou controlando com o dedo na dela como preferir.
-            </p>
-          </section>
-          <section id="cotass">
-            <!-- Conteúdo da subseção Estúdio -->
-            <h3>Cotas</h3>
-            <p>
-              Acessível ao clicar na opção "Cotas", ele irá fechar o menu e o botão "Drive", e mostrar todas as cotas
-              posicionadas em volta do caminhão de forma igual está na Ficha Técnica, para abrir as cotas é só clicar na
-              correspondente no meio dela do círculo e para fechar só apertar novamente.
-              </br>
-              Para fechar as cotas é só clicar no botão "x" que apareceu junto com elas e o botão Drive e o botão do
-              menu irão voltar a aparecer.
-            </p>
-          </section>
-        </section>
-        <section id="dentrocarro">
-          <!-- Conteúdo da subseção Seleção de modelo -->
-          <h2>Dentro Carro</h2>
+        </i>
+        <section id="cores">
+          <!-- Conteúdo da subseção Interno -->
+          <h3>Cores</h3>
           <p>
-            Acessível após clicar em "abrir porta" dentro do submenu de "ações", ele irá mostrar 2 botões azul ciano
-            dentro do carro que ao tocar nele, ele irá efetuar a troca de cena para de dentro do carro.
+            Ao Clicar na opção "cores" no menu, irá abrir um submenu com rolamento das 23 opções de cores e suas
+            descrições que ao tocar nelas o usuário irá reparar que trocou toda a cor
+            da cabine do caminhão.
             </br>
-            Nessa cena o usuário terá uma experiência imersiva de como será sua visão dentro do carro parecido com a
-            vida real, ele poderá tocar na buzina e ela irá fazer barulho, ele poderá movimentar o celular como se fosse
-            o seu rosto para ver aos redores da cabine interna.
-            </br>
-            O usuário não poderá sair de dentro da cabine por isso quando a camera chegar no limite das portas ele deve
-            levar o caminhão junto dele para ele não poder sair, a ideia dessa cena é ela ser apenas dento da cabine
-            para o usuário final.
-            </br>
-            Para sair dessa cena é só tocar no botão "x" no canto superior direito que ele irá começar novamente na cena
-            principal a "SampleScene".
+            Ao Apertar no botão "X" que está no local de onde estava o botão para abrir o menu, ele irá fechar o
+            submenu de cores e voltará ao menu de funções porém o caminhão irá manter a última cor colocada.
           </p>
         </section>
-
-
-        <section id="api">
-          <!-- Conteúdo da seção Bibliotecas externas usadas -->
-          <h2>Bibliotecas usadas</h2>
+        <section id="implemento">
+          <!-- Conteúdo da subseção Externo -->
+          <h3>Implemento</h3>
           <p>
-          <ul>
-            <li><a
-                href="https://docs.unity3d.com/Packages/com.unity.xr.core-utils@2.0/manual/xr-origin.html#:~:text=The%20XR%20Origin%20represents%20the,Offset%20Object%2C%20and%20a%20Camera.">XROrigin</a>
-            </li>
-            <li><a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@5.1/manual/index.html">AR
-                Foundation</a></li>
-            <li><a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.0/manual/plane-manager.html">AR
-                Plane Manager</a></li>
-            <li><a
-                href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.2/manual/anchor-manager.html#:~:text=The%20anchor%20manager%20is%20a,the%20anchor%20throughout%20its%20lifetime.">AR
-                Anchor Manager</a></li>
-            <li><a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.0/manual/raycast-manager.html">AR
-                Raycast Manager</a></li>
-            <li><a
-                href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@2.2/api/UnityEngine.XR.ARFoundation.ARInputManager.html">AR
-                Input Manager</a></li>
-            <li><a
-                href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.0/api/UnityEngine.XR.ARFoundation.ARCameraManager.html">AR
-                Camera Manager</a></li>
-            <li><a
-                href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@1.0-preview.8/api/UnityEngine.XR.ARFoundation.ARSessionOrigin.html">AR
-                Session Oriin</a></li>
-          </ul>
+            Ao clicar na opção "Implementos", do menu de funções irá abrir um submenu com 17 opções de Implementos e
+            ao clicar neles irá abrir um submenu com sua descrição, por exemplo "3 Eixos","3 Eixos Espaçado","Bitrem 7
+            Eixos","3 + 1 Eixos".
+            </br>
+            Todas essas opções deverão mostrar os implementos de acordo <del> quando houver os modelos prontos pro
+              aplicativo</del>, para poder ver de forma mais imersiva e até tirar duvidas sobre qual é o melhor para o
+            modelo e a finalidade do caminhão
+            No momento, as opções são apenas visuais, ao clicar em qualquer botão ele irá aparecer porém ao apertar o
+            drive ele irá sumir e não ocorrerá nenhuma ação.
+            </br>
           </p>
         </section>
-    </main>
+        <section id="cabines">
+          <!-- Conteúdo da subseção Estúdio -->
+          <h3>Cabine</h3>
+          <p>
+            Acessível ao clicar na opção "Cabine", do menu funções irá abrir um submenu com 2 opções de cabines
+            disponíveis para o modelo
+            </br>
+            No momento,só tem a opção "Top Space" com funcionalidade, ela deve abrir um submenu com 3 opções de
+            Defletores, Defletor alto, defeltor baixo e sem defletor.
+          </p>
+        </section>
+        <section id="argumentos">
+          <!-- Conteúdo da subseção Estúdio -->
+          <h3>Argumentos</h3>
+          <p>
+            Acessível ao clicar na opção "Argumentos", do menu funções, ele irá recolher o botão "Drive" e colocar 2
+            botões azuis no caminhão onde deverá mostrar e explicar partes específicas do caminhão.
+            </br>
+            No momento, as opções ainda não estão colocadas então só está visualmente um escopo.
+          </p>
+        </section>
+        <section id="acoes">
+          <!-- Conteúdo da subseção Estúdio -->
+          <h3>Ações</h3>
+          <p>
+            Acessível ao clicar na opção "Ações", ele irá abrir um submenu com 3 opções .
+            Ao entrar nesse submenu o usuário irá ver as opções "Mirror Cam", "Bascular" e "Abrir Porta".
+            </br>
+            A opção "Mirror Cam" irá substituir o retrovisor convencional para o Mirror Cam que é uma versão mais
+            "luxuosa", o "abrir porta" só ira funcionar quando o caminhão não estiver com a animção "bascular"
+            funcionando, caso a porta esteja aberta e apertar em bascular, ela deve fechar para bascular.
+            </br>
+            O caminhão deverá andar enquanto estiver de porta aberta e/ou basculado, por isso o botão Drive irá sumir,
+            caso você volte no menu até o inicial e o "Drive" voltar a aparecer, ao clicar nele, ele irá
+            automaticamente fechar a porta ou fechar a bascula
 
-    <footer>
-      <p>&copy; Agência DADS de Publicidade</p>
-    </footer>
-  </div>
+          </p>
+        </section>
+        <section id="fichatecnica">
+          <!-- Conteúdo da subseção Estúdio -->
+          <h3>Ficha Técnica</h3>
+          <p>
+            Acessível ao clicar na opção "Ficha Técnica", ele irá abrir uma tela cheia da ficha técnica do caminhão
+            onde o usuário pode ver detalhadamente .
+            </br>
+            Ele poderá fazer tanto com um leve toque para cima e soltar e ele irá fazer o rolamento da tela de acordo
+            ou controlando com o dedo na dela como preferir.
+          </p>
+        </section>
+        <section id="cotass">
+          <!-- Conteúdo da subseção Estúdio -->
+          <h3>Cotas</h3>
+          <p>
+            Acessível ao clicar na opção "Cotas", ele irá fechar o menu e o botão "Drive", e mostrar todas as cotas
+            posicionadas em volta do caminhão de forma igual está na Ficha Técnica, para abrir as cotas é só clicar na
+            correspondente no meio dela do círculo e para fechar só apertar novamente.
+            </br>
+            Para fechar as cotas é só clicar no botão "x" que apareceu junto com elas e o botão Drive e o botão do
+            menu irão voltar a aparecer.
+          </p>
+        </section>
+      </section>
+      <section id="dentrocarro">
+        <!-- Conteúdo da subseção Seleção de modelo -->
+        <h2>Dentro Carro</h2>
+        <p>
+          Acessível após clicar em "abrir porta" dentro do submenu de "ações", ele irá mostrar 2 botões azul ciano
+          dentro do carro que ao tocar nele, ele irá efetuar a troca de cena para de dentro do carro.
+          </br>
+          Nessa cena o usuário terá uma experiência imersiva de como será sua visão dentro do carro parecido com a
+          vida real, ele poderá tocar na buzina e ela irá fazer barulho, ele poderá movimentar o celular como se fosse
+          o seu rosto para ver aos redores da cabine interna.
+          </br>
+          O usuário não poderá sair de dentro da cabine por isso quando a camera chegar no limite das portas ele deve
+          levar o caminhão junto dele para ele não poder sair, a ideia dessa cena é ela ser apenas dento da cabine
+          para o usuário final.
+          </br>
+          Para sair dessa cena é só tocar no botão "x" no canto superior direito que ele irá começar novamente na cena
+          principal a "SampleScene".
+        </p>
+      </section>
+
+  </main>
   <div class="container-top">
     <a href="#" class="top"></a>
+
   </div>
+  <footer>
+    <p>&copy; Agência DADS de Publicidade</p>
+  </footer>
 </body>
 
 </html>
